@@ -22,6 +22,9 @@ class DebtView(APIView):
             sender_uid=request.POST.get("sender_uid"),
             receiver_uid=request.POST.get("receiver_uid"),
             count=request.POST.get("count"),
+            timestamp=request.POST.get("timestamp"),
+            last_update_timestamp=request.POST.get("last_update_timestamp"),
+            is_confirm=request.POST.get("is_confirm"),
         )
 
         return Response("new_debt")
