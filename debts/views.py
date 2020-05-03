@@ -14,7 +14,7 @@ class DebtView(APIView):
     allowed_methods = ('GET', 'POST', 'DELETE')
 
     def get(self, request):
-        data = get_by_uid(uid=request.GET.get("uid"), request=request)
+        data = get_by_uid(uid=request.GET.get("uid"))
         return Response(data)
 
     def post(self, request):
